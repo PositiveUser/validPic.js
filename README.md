@@ -50,11 +50,11 @@ document.getElementById('add-image').addEventListener("error", function () {
 ```javascript
 $('.valid-pic').on('error', function (e) {
     const data = e.originalEvent.detail;
- 
+
     console.log(data);
     console.log("Invalid image - jQuery custom event");
-    
+
     $(data.input).css('background', 'red');
-    $(data.input).after('<p class="error-message" class="note">Invalid image type!</p>');
+    $(data.input).after('<p class="error-message" role="note">Invalid image type!</p>');
 });
 ```
